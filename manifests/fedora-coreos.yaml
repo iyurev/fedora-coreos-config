@@ -4,6 +4,7 @@
 
 include: fedora-coreos-base.yaml
 
+
 automatic-version-prefix: "${releasever}.<date:%Y%m%d>.dev"
 mutate-os-release: "${releasever}"
 
