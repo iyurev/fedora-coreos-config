@@ -10,6 +10,7 @@ rojig:
 
 repos:
   - fedora-coreos-pool
+  - kubernetes
 
 add-commit-metadata:
   fedora-coreos.stream: stable
