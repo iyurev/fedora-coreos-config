@@ -45,15 +45,15 @@ default-target: multi-user.target
 remove-from-packages:
   # We're not using resolved yet.
   - [systemd, /usr/lib/systemd/systemd-resolved,
-              /usr/lib/systemd/system/systemd-resolved.service]
+     /usr/lib/systemd/system/systemd-resolved.service]
   # We're not using networkd.
   - [systemd, /etc/systemd/networkd.conf,
-              /usr/lib/systemd/systemd-networkd,
-              /usr/lib/systemd/systemd-networkd-wait-online,
-              /usr/lib/systemd/network/.*,
-              /usr/lib/systemd/system/systemd-networkd.service,
-              /usr/lib/systemd/system/systemd-networkd.socket,
-              /usr/lib/systemd/system/systemd-networkd-wait-online.service]
+     /usr/lib/systemd/systemd-networkd,
+     /usr/lib/systemd/systemd-networkd-wait-online,
+     /usr/lib/systemd/network/.*,
+     /usr/lib/systemd/system/systemd-networkd.service,
+     /usr/lib/systemd/system/systemd-networkd.socket,
+     /usr/lib/systemd/system/systemd-networkd-wait-online.service]
   - [systemd-container, /usr/lib/systemd/network/.*]
   - [systemd-udev, /usr/lib/systemd/network/.*]
   # We're still using the legacy dracut network module for now. Dracut keys off
@@ -123,7 +123,7 @@ packages:
   - cloud-utils-growpart
   - lvm2 iscsi-initiator-utils sg3_utils
   - device-mapper-multipath
-  - xfsprogs e2fsprogs mdadm
+  - xfsprogs e2fsprogs btrfs-progs mdadm
   - cryptsetup
   - cifs-utils
   # Time sync
@@ -132,7 +132,7 @@ packages:
   - sssd shadow-utils
   - logrotate
   # Used by admins interactively
-  - sudo coreutils less tar xz gzip bzip2
+  - sudo coreutils attr less tar xz gzip bzip2
   - socat net-tools bind-utils
   - bash-completion
   - openssl
@@ -146,8 +146,7 @@ packages:
   - console-login-helper-messages-profile
   - toolbox
   # CoreOS Installer
-  - coreos-installer
-#coreos-installer-dracut
+  - coreos-installer coreos-installer-systemd
   # i18n
   - kbd
   - whois-nls
