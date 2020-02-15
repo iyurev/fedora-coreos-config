@@ -5,7 +5,7 @@
 include:
   - ignition-and-ostree.yaml
   - file-transfer.yaml
-  - kubernetes.yaml
+#  - kubernetes.yaml
 
 initramfs-args:
   - --no-hostonly
