@@ -10,7 +10,7 @@ rojig:
 
 repos:
   - fedora-coreos-pool
-  - fedora-next-modular
+  - fedora-modular
   - kubernetes
 
 
