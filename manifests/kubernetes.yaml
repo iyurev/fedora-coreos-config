@@ -1,12 +1,17 @@
 packages:
   - cri-o
-  - kubelet
-  - kubeadm
-  - kubectl
+#  - kubelet
+#  - kubeadm
+#  - kubectl
 
 
 #https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
 postprocess:
+  - |
+    curl -L -v -O https://dl.k8s.io/v1.17.3/kubernetes-node-linux-amd64.tar.gz \
+    tar -xzf kubernetes-node-linux-amd64.tar.gz \
+    mv kubernetes/node/bin/* /sbin/
+
   - |
     #!/usr/bin/env bash
     sed -i 's/^SELINUX=enforcing$/SELINUX=permissive/' /etc/selinux/config
@@ -17,3 +22,4 @@ postprocess:
     net.bridge.bridge-nf-call-ip6tables = 1
     net.bridge.bridge-nf-call-iptables = 1
     EOF
+
