@@ -1,0 +1,15 @@
+variant: fcos
+version: 1.0.0
+passwd:
+  users:
+    - name: core
+      password_hash: $6$xyz$NTtOpje/S6k1W98AjuO3mHaF8xHWjoCjrW2S5wmafAYzmhHGaNIULX9UyyLHld4GWS1dVs0ZKb8xgHXu1hK/10
+      ssh_authorized_keys:
+           - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDpsWqMZOEcdYpwZ/7N/EKb+O/5shrVbg2z9jTeTKB6+ demo-pub-key@test
+
+
+
+
+
+
+
