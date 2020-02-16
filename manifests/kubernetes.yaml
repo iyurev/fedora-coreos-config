@@ -1,5 +1,5 @@
 packages:
-  - cri-o-2:1.17.0-1.module_f31+7715+4eeda4d1.x86_64
+  - cri-o
 #  - kubelet-1.17.3-0
 #  - kubeadm-1.17.3-0
 #  - kubectl-1.17.3-0
