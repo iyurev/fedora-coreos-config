@@ -12,7 +12,7 @@ repos:
   - fedora-coreos-pool
   - fedora-modular
   - fedora
-  - kubernetes
+#  - kubernetes
 
 add-commit-metadata:
   fedora-coreos.stream: stable

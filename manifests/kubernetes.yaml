@@ -1,8 +1,8 @@
 packages:
   - cri-o
-  - kubelet-1.17.3-0
-  - kubeadm-1.17.3-0
-  - kubectl-1.17.3-0
+#  - kubelet-1.17.3-0
+#  - kubeadm-1.17.3-0
+#  - kubectl-1.17.3-0
 
 
 #https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
