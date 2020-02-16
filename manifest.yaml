@@ -11,6 +11,8 @@ rojig:
 repos:
   - fedora-coreos-pool
   - fedora-modular
+  - fedora-updates-modular
+  - fedora-updates-testing-modular
   - fedora
 #  - kubernetes
 
