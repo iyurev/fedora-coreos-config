@@ -4,10 +4,11 @@ packages:
 #  - kubeadm
 #  - kubectl
 
-- add-files: [
-    - "kube-binaries/kubelet"
-    - "/sbin/kubelet"
-       ]
+- add-files:
+    -
+      - "kube-binaries/kubelet"
+      - "/sbin/kubelet"
+
 #https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
 postprocess:
   - |
