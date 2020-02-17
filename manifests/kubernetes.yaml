@@ -4,7 +4,7 @@ packages:
 #  - kubeadm
 #  - kubectl
 
-- add-files:
+add-files:
     - - "kube-binaries/kubelet"
       - "/sbin/kubelet"
 
