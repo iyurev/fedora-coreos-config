@@ -5,8 +5,7 @@ packages:
 #  - kubectl
 
 - add-files:
-    -
-      - "kube-binaries/kubelet"
+    - - "kube-binaries/kubelet"
       - "/sbin/kubelet"
 
 #https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
