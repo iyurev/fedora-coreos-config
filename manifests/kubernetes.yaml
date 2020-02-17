@@ -8,11 +8,22 @@ add-files:
     - - "kube-binaries/kubelet"
       - "/sbin/kubelet"
 
+    - - "kube-binaries/kubectl"
+      - "/sbin/kubectl"
+
+    - - "kube-binaries/kubeadm"
+      - "/sbin/kubeadm"
+
+    - - "kube-binaries/kube-proxy"
+      - "/sbin/kube-proxy"
 #https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
 postprocess:
   - |
     #!/usr/bin/env bash
     sed -i 's/^SELINUX=enforcing$/SELINUX=permissive/' /etc/selinux/config
+
+  - |
+     mkdir -p /usr/share/containers/oci/hooks.d
 
   - |
     #!/usr/bin/env bash
